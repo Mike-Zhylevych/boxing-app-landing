@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Landing Page</title>
+    <!-- Add Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        font-weight: 300;
+        line-height: 1.6;
+        background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+        color: #ffffff;
+        min-height: 100vh;
+      }
+      a,
+      a:visited {
+        color: #007aff;
+      }
+      .hero {
+        padding: 80px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle at center,
+          rgba(0, 122, 255, 0.1) 0%,
+          rgba(0, 122, 255, 0.05) 30%,
+          rgba(0, 122, 255, 0) 70%
+        );
+        filter: blur(40px);
+        z-index: 1;
+      }
+
+      .hero h1 {
+        position: relative;
+        z-index: 2;
+        font-weight: 200;
+        font-size: 3rem;
+        margin-bottom: 10vh;
+        color: white;
+      }
+
+      .images-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero img {
+        position: relative;
+        z-index: 2;
+        width: 200px;
+        border-radius: 10px;
+        border: 2px solid #007aff;
+        transition: transform 0.3s ease;
+      }
+
+      .hero img:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 122, 255, 0.4);
+      }
+
+      .support,
+      .privacy {
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      h2 {
+        color: #007aff;
+        font-size: 2rem;
+        font-weight: 300;
+      }
+
+      p,
+      li {
+        color: #e0e0e0;
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.8;
+      }
+
+      .privacy-list {
+        list-style: none;
+        padding: 20px;
+        text-align: left;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .privacy-list li {
+        margin-bottom: 15px;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .privacy-list li::before {
+        content: "•";
+        color: #007aff;
+        position: absolute;
+        left: 0;
+      }
+      .last-updated {
+        color: #4c4c4c;
+        font-size: 16px;
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <h1>
+        Introducing Boxing-Timer, a simple timer for fighters, trainers, and
+        fitness enthusiasts alike!
+      </h1>
+      <div class="images-container">
+        <img src="img/Screen_1.png" alt="App Screenshot" />
+        <img src="img/Screen_2.png" alt="App Screenshot" />
+        <img src="img/Screen_3.png" alt="App Screenshot" />
+      </div>
+    </div>
+
+    <div class="support">
+      <h2>Support</h2>
+      <p>
+        If you need help, please contact me at
+        <a href="mailto:mike.zhylevych@gmail.com">mike.zhylevych@gmail.com</a>.
+      </p>
+    </div>
+
+    <div class="privacy">
+      <h2>Privacy Policy</h2>
+      <p class="last-updated">Last updated: February 2024</p>
+      <ul class="privacy-list">
+        <li>We do not collect any personal information</li>
+        <li>No cookies or tracking mechanisms are used</li>
+        <li>No user data is stored on our servers</li>
+        <li>No account creation required</li>
+        <li>No location tracking or device information collection</li>
+        <li>Complete anonymity while using our application</li>
+        <li>
+          For any questions, contact me at
+          <a href="mailto:mike.zhylevych@gmail.com">mike.zhylevych@gmail.com</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
